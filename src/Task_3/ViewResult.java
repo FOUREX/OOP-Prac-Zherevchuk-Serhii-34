@@ -3,14 +3,26 @@ package Task_3;
 import java.io.*;
 import java.util.ArrayList;
 
+/**
+ * Клас представлення обчислень
+ * @author FOUREX aka Сергій Жеревчук
+ */
 public class ViewResult implements View {
     private static final int DEFAULT_COUNT = 5;
     ArrayList<Calculator> calculators = new ArrayList<Calculator>();
 
+    /**
+     * Базовй конструктор класу
+     */
     public ViewResult() {
         this(DEFAULT_COUNT);
     }
 
+    /**
+     * Конструктор класу
+     *
+     * @param count Кількість записів
+     */
     public ViewResult(int count) {
         this.init(count);
     }

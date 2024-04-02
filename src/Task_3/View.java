@@ -23,6 +23,6 @@ interface View {
 
     public void save(String path) throws IOException;
 
-    /** Відновлює раніше збережені дані  */
+    /** Відновлює раніше збережені дані */
     public void restore(String path) throws Exception;
 }
