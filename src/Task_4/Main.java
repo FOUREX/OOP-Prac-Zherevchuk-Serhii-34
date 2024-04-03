@@ -53,7 +53,7 @@ public class Main {
                 }
                 case 3 -> {
                     serialized = true;
-                    view.save("temp/Task_3/view.bin");
+                    view.save("temp/Task_4/view.bin");
                     System.out.println("Клас серіалізований");
                 }
                 case 4 -> {
@@ -62,7 +62,7 @@ public class Main {
                         break;
                     }
 
-                    view.restore("temp/Task_3/view.bin");
+                    view.restore("temp/Task_4/view.bin");
                     System.out.println("Клас десеріалізований");
                 }
                 case 5 -> {
