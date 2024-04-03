@@ -1,8 +1,9 @@
 package Task_3;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
-interface View {
+public interface View {
     /** Показує заголовок */
     public void header();
 
@@ -17,6 +18,9 @@ interface View {
 
     /** Повертає кількість елементів */
     public int getCount();
+
+    /** Повертає колекцію {@link Calculator} */
+    public ArrayList<Calculator> getCalculators();
 
     /** Виконує ініціалізацію */
     public void init(int count);

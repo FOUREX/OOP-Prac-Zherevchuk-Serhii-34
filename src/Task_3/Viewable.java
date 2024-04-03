@@ -1,6 +1,6 @@
 package Task_3;
 
-interface Viewable {
+public interface Viewable {
     /** Створює об'єкт, реалізуючий {@link View} */
     public View getView();
 }

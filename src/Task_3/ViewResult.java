@@ -66,9 +66,16 @@ public class ViewResult implements View {
         footer();
     }
 
+    /** Повертає кількість елементів */
     @Override
     public int getCount() {
         return this.calculators.size();
+    }
+
+    /** Повертає колекцію {@link Calculator} */
+    @Override
+    public ArrayList<Calculator> getCalculators() {
+        return this.calculators;
     }
 
     /**
