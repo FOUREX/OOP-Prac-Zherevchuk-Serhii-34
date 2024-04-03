@@ -25,3 +25,4 @@
 ![](assets/task-4/Приклад%20роботи.gif)
 
 *Думаю, що найкраще гіфками показати роботу програми*
+![Кря](https://tenor.com/ru/view/pikachu-pokemon-tongue-out-wiggle-tongue-weird-face-gif-16364996.gif)
