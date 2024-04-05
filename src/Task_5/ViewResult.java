@@ -2,10 +2,24 @@ package Task_5;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class ViewResult implements View {
     /** Колекція типу {@link CalcResult} в якій зберігаються результати обчислень */
     protected ArrayList<CalcResult> results = new ArrayList<>();
+
+    /**
+     * Ініціалізує та встановлює кількість результатів, випадкова генерація чисел
+     *
+     * @param count Кількість обчислень
+     */
+    public void init(int count) {
+        results.clear();
+
+        for (int i = 0; i < count; i++) {
+            results.add(new CalcResult((int) (Math.random() * 50) + 1));
+        }
+    }
 
     /**
      * Ініціалізує та встановлює кількість результатів

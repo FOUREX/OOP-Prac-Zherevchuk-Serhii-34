@@ -9,6 +9,13 @@ import java.util.ArrayList;
  */
 public interface View {
     /**
+     * Ініціалізує та встановлює кількість результатів, випадкова генерація чисел
+     *
+     * @param count Кількість обчислень
+     */
+    public void init(int count);
+
+    /**
      * Ініціалізує та встановлює кількість результатів
      *
      * @param count Кількість обчислень
