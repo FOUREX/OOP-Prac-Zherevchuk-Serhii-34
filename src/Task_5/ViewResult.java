@@ -2,8 +2,10 @@ package Task_5;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Random;
 
+/**
+ * Клас реалізуючий виведення результатів обчислень у вигляді списку
+ */
 public class ViewResult implements View {
     /** Колекція типу {@link CalcResult} в якій зберігаються результати обчислень */
     protected ArrayList<CalcResult> results = new ArrayList<>();
@@ -65,6 +67,12 @@ public class ViewResult implements View {
     @Override
     public ArrayList<CalcResult> getResults() {
         return this.results;
+    }
+
+    /** Змінює результати обчислень */
+    @Override
+    public void setResults(ArrayList<CalcResult> results) {
+        this.results = results;
     }
 
     /**

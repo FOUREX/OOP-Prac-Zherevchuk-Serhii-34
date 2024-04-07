@@ -4,9 +4,18 @@ import Task_5.ConsoleCommand;
 
 import java.io.IOException;
 
+/**
+ * Клас який реалізує виведення результатів в консоль
+ */
 public class View implements ConsoleCommand {
-    private Task_5.View view;
+    /** Екземпляр класу {@link Task_5.View} який реалізує виведення результатів */
+    private final Task_5.View view;
 
+    /**
+     * Конструктор класу
+     *
+     * @param view Екземпляр класу {@link Task_5.View}
+     */
     public View(Task_5.View view) {
         this.view = view;
     }
@@ -19,6 +28,11 @@ public class View implements ConsoleCommand {
         return '1';
     }
 
+    /**
+     * Повертає назву команди
+     *
+     * @return Назва команди
+     */
     @Override
     public String toString() {
         return "Вивести результати";

@@ -1,18 +1,19 @@
 package Task_5;
 
-import Task_5.ConsoleCommands.*;
-import Task_5.ConsoleCommands.View;
-
 import java.io.IOException;
 
 /**
- * Клас {@link Application}, який використовує шаблон Singleton для створення єдиного екземпляра додатка
+ * Клас який використовує шаблон Singleton для створення єдиного екземпляра додатка
  */
 class Application {
+    /** Єдиний екземпляр додатка {@link Application} */
     private static final Application instance = new Application();
-    private Task_5.View view = new ViewableTable().getView();
-    private Menu menu = new Menu();
+    /** Екземпляр класу {@link View} який реалізує виведення результатів */
+    private final View view = new ViewableTable().getView();
+    /** Екземпляр класу {@link Menu} який виконує команди */
+    private final Menu menu = new Menu(view);
 
+    /** Приватний конструктор класу */
     private Application() {
 
     }
@@ -30,11 +31,12 @@ class Application {
      * Метод для запуску додатка, який очікує введення користувача та виконує відповідні команди.
      */
     public void run() throws IOException, ClassNotFoundException {
-        menu.add(new View(view));
-        menu.add(new Insert(view));
-        menu.add(new Generate(view));
-        menu.add(new Save(view));
-        menu.add(new Restore(view));
+        menu.add(new Task_5.ConsoleCommands.View(view));
+        menu.add(new Task_5.ConsoleCommands.Insert(view));
+        menu.add(new Task_5.ConsoleCommands.Generate(view));
+        menu.add(new Task_5.ConsoleCommands.Save(view));
+        menu.add(new Task_5.ConsoleCommands.Restore(view));
+        menu.add(new Task_5.ConsoleCommands.Undo(view));
         menu.execute();
     }
 }

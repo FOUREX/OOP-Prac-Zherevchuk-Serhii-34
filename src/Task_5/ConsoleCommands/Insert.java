@@ -6,9 +6,18 @@ import Task_5.View;
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ * Клас який реалізує введення даних для обчислень
+ */
 public class Insert implements ConsoleCommand {
+    /** Екземпляр класу {@link Task_5.View} який реалізує виведення результатів */
     private final View view;
 
+    /**
+     * Конструктор класу
+     *
+     * @param view Екземпляр класу {@link Task_5.View}
+     */
     public Insert(View view) {
         this.view = view;
     }
@@ -20,6 +29,11 @@ public class Insert implements ConsoleCommand {
         return '2';
     }
 
+    /**
+     * Повертає назву команди
+     *
+     * @return Назва команди
+     */
     public String toString() {
         return "Ввести";
     }

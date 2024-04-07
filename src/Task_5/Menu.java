@@ -1,12 +1,31 @@
 package Task_5;
 
+import Task_5.ConsoleCommands.Undo;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+/**
+ * Клас реалізуючий меню, виконання та скасування команд
+ */
 public class Menu implements Command {
-    private ArrayList<ConsoleCommand> menu = new ArrayList<>();
+    /** Екземпляр класу {@link ResultsHistory} який зберігає історію результатів */
+    private static final ResultsHistory resultsHistory = ResultsHistory.getInstance();
+    /** Список елементів меню */
+    private final ArrayList<ConsoleCommand> menu = new ArrayList<>();
+    /** Екземпляр класу {@link View} який реалізує виведення результатів */
+    private final View view;
+
+    /**
+     * Конструкток кламу
+     *
+     * @param view Екземпляр класу {@link View}
+     */
+    public Menu(View view) {
+        this.view = view;
+    }
 
     /**
      * Додає нову команду в колекцію
@@ -19,6 +38,11 @@ public class Menu implements Command {
         return command;
     }
 
+    /**
+     * Повертає список доступних команд
+     *
+     * @return список команд у вигляді строки
+     */
     @Override
     public String toString() {
         StringBuilder commandsList = new StringBuilder();
@@ -50,6 +74,10 @@ public class Menu implements Command {
 
             for (ConsoleCommand command : menu) {
                 if (key == command.getKey()) {
+                    if (!(command instanceof Undo || command instanceof Task_5.ConsoleCommands.View)) {
+                        resultsHistory.add(view.getResults());
+                    }
+
                     command.execute();
                     continue menuLoop;
                 }

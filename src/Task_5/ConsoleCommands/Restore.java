@@ -5,9 +5,18 @@ import Task_5.View;
 
 import java.io.IOException;
 
+/**
+ * Клас який реалізує відновлення раніше збережених результатів обчислення
+ */
 public class Restore implements ConsoleCommand {
-    private final Task_5.View view;
+    /** Екземпляр класу {@link Task_5.View} який реалізує виведення результатів */
+    private final View view;
 
+    /**
+     * Конструктор класу
+     *
+     * @param view Екземпляр класу {@link View}
+     */
     public Restore(View view) {
         this.view = view;
     }
@@ -19,6 +28,11 @@ public class Restore implements ConsoleCommand {
         return '5';
     }
 
+    /**
+     * Повертає назву команди
+     *
+     * @return Назва команди
+     */
     public String toString() {
         return "Відновити";
     }

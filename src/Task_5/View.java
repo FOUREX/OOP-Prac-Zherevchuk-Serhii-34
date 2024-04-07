@@ -1,6 +1,5 @@
 package Task_5;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -31,6 +30,9 @@ public interface View {
 
     /** Повертає колекцію {@link CalcResult} */
     public ArrayList<CalcResult> getResults();
+
+    /** Змінює результати обчислень */
+    public void setResults(ArrayList<CalcResult> results);
 
     /**
      * Зберігає поточні результати

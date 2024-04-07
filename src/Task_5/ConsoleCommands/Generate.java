@@ -1,23 +1,23 @@
 package Task_5.ConsoleCommands;
 
-import Task_5.CalcResult;
 import Task_5.ConsoleCommand;
 import Task_5.View;
 
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Generate extends ChangeItem implements ConsoleCommand {
-    private View view;
+/**
+ * Клас який реалізує автоматичну генерацію чисел для обчислень
+ */
+public class Generate implements ConsoleCommand {
+    /** Екземпляр класу {@link Task_5.View} який реалізує виведення результатів */
+    private final View view;
 
-    public View getView() {
-        return this.view;
-    }
-
-    public void setView(View view) {
-        this.view = view;
-    }
-
+    /**
+     * Конструктор класу
+     *
+     * @param view Екземпляр класу {@link Task_5.View}
+     */
     public Generate(View view) {
         this.view = view;
     }
@@ -30,6 +30,11 @@ public class Generate extends ChangeItem implements ConsoleCommand {
         return '3';
     }
 
+    /**
+     * Повертає назву команди
+     *
+     * @return Назва команди
+     */
     @Override
     public String toString() {
         return "Згенерувати";
