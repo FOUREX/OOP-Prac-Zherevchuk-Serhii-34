@@ -30,5 +30,10 @@
 
 ![](assets/task-5/Приклад%20роботи.gif)
 
+## Завдання 6
+[Код](src/Task_6) | [Тести](test/Task_6/Test.java)
+
+![](assets/task-6/Приклад%20роботи.gif)
+
 *Думаю, що найкраще гіфками показати роботу програми*
 ![Кря](https://tenor.com/ru/view/pikachu-pokemon-tongue-out-wiggle-tongue-weird-face-gif-16364996.gif)
