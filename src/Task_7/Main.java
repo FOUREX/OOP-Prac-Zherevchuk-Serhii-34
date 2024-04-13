@@ -118,8 +118,8 @@ public class Main extends JFrame {
     /** Створює пусту таблицю при запуску програми */
     private void createTable() {
         ResultsTable.setModel(new DefaultTableModel(
-                new Object[][]{},
-                new String[]{"Довжина сторони", "Сума"}
+            new Object[][]{},
+            new String[]{"Довжина сторони", "Сума"}
         ));
     }
 
