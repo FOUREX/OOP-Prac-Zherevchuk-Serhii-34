@@ -36,5 +36,10 @@
 
 ![](assets/task-6/Приклад%20роботи.gif)
 
+## Завдання 7
+[Код](src/Task_7)
+
+![](assets/task-7/Приклад%20роботи.gif)
+
 *Думаю, що найкраще гіфками показати роботу програми*
 ![Кря](https://tenor.com/ru/view/pikachu-pokemon-tongue-out-wiggle-tongue-weird-face-gif-16364996.gif)
