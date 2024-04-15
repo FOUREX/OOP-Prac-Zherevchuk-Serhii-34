@@ -99,6 +99,7 @@ public class ViewResult implements View {
         try (FileInputStream fileInputStream = new FileInputStream(path);
              ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
             this.results = (ArrayList<CalcResult>) objectInputStream.readObject();
+            this.calculate();
         }
     }
 }
